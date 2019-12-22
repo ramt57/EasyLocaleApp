@@ -1,0 +1,3 @@
+include ':app', ':easylocale'
+rootProject.name='EasyLocaleApp'
+project(':easylocale').projectDir = new File('easylocalelib')

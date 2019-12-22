@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">لغة سهلة</string>
+    <string name="arabic">(ar)عربى</string>
+    <string name="english">(en)الإنجليزية</string>
+    <string name="msg">مرحبا بالعالم</string>
+</resources>
