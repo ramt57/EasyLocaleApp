@@ -12,7 +12,7 @@ class MainActivity : EasyLocaleAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setTitle(R.string.app_name)
-        button.setOnClickListener { updateLocale(Locale("en")) }
-        button2.setOnClickListener { updateLocale(Locale("ar")) }
+        button.setOnClickListener { setLocale(Locale("en")) }
+        button2.setOnClickListener { setLocale(Locale("ar")) }
     }
 }
