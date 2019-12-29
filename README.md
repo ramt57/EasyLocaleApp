@@ -19,7 +19,7 @@ Android Library for easy changing locale programmatically
  
 - Add the dependency
  ```groovy 
-  implementation 'com.github.ramt57:EasyLocaleApp:v1.0.0'
+  implementation 'com.github.ramt57:EasyLocaleApp:v1.0.3'
   ```
     
 ## Solution
@@ -65,17 +65,7 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        localeDelegate.onCreate(this)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        localeDelegate.onResumed(this)
-    }
-
-    override fun onPause() {
-        super.onPause()
-        localeDelegate.onPaused()
+        localeDelegate.initialise(this,this)
     }
 }
 ```
@@ -83,11 +73,11 @@ open class BaseActivity : AppCompatActivity() {
 =
 (Usage 1)
 
-If you're using the base classes, just call `updateLocale(newLocale)`. It will then update the locale and restart the activity.
+If you're using the base classes, just call `setLocale(newLocale)`. It will then update the locale and restart the activity.
 
 Example:
 ```kotlin 
-btn_locale.setOnClickListener { updateLocale(Locales("ar") }
+btn_locale.setOnClickListener { setLocale(Locales("ar") }
 ``` 
 
 (Usage 2)
